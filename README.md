@@ -27,7 +27,16 @@ An MCP (Model Context Protocol) server for controlling Dyson air purifiers and f
 
 ## Installation
 
+### From npm (Recommended)
+
 ```bash
+npx mcp-dyson-appliances
+```
+
+### From Source
+
+```bash
+git clone https://github.com/m2ai-mcp-servers/mcp-dyson-appliances.git
 cd mcp-dyson-appliances
 npm install
 npm run build
@@ -60,8 +69,8 @@ Add to your `claude_desktop_config.json`:
 {
   "mcpServers": {
     "dyson": {
-      "command": "node",
-      "args": ["/path/to/dyson-mcp/dist/index.js"],
+      "command": "npx",
+      "args": ["-y", "mcp-dyson-appliances"],
       "env": {
         "DYSON_EMAIL": "your-email@example.com",
         "DYSON_PASSWORD": "your-password",
@@ -221,4 +230,4 @@ MIT
 
 ---
 
-*Built autonomously by [GRIMLOCK](https://github.com/MatthewSnow2/grimlock) - Autonomous MCP Server Factory*
+*Built autonomously by [GRIMLOCK](https://github.com/m2ai-portfolio/grimlock) - Autonomous MCP Server Factory*
